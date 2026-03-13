@@ -43,5 +43,8 @@
   },
   "peerDependencies": {
     "expo": "*"
+  },
+  "jest": {
+    "preset": "expo-module-scripts"
   }
 }
