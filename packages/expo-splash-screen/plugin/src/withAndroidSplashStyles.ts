@@ -6,7 +6,6 @@ import {
   withAndroidStyles,
 } from '@expo/config-plugins';
 import { Colors } from '@expo/config-plugins/build/android';
-import { ExpoConfig } from '@expo/config-types';
 
 import {
   AndroidSplashConfig,
@@ -26,7 +25,7 @@ export const withAndroidSplashStyles: ConfigPlugin<{
   isLegacyConfig: boolean;
 }> = (config, { splashConfig, isLegacyConfig }) => {
   config = withAndroidColors(config, (config) => {
-    const backgroundColor = getSplashBackgroundColor(config, splashConfig);
+    const backgroundColor = getSplashBackgroundColor(splashConfig);
     if (!backgroundColor) {
       return config;
     }
@@ -34,7 +33,7 @@ export const withAndroidSplashStyles: ConfigPlugin<{
     return config;
   });
   config = withAndroidColorsNight(config, (config) => {
-    const backgroundColor = getSplashDarkBackgroundColor(config, splashConfig);
+    const backgroundColor = getSplashDarkBackgroundColor(splashConfig);
     if (!backgroundColor) {
       return config;
     }
@@ -119,17 +118,15 @@ export function removeOldSplashStyleGroup(styles: AndroidConfig.Resources.Resour
 }
 
 export function getSplashBackgroundColor(
-  config: ExpoConfig,
   props: AndroidSplashConfig | null
 ): string | null {
-  return getAndroidSplashConfig(config, props)?.backgroundColor ?? null;
+  return getAndroidSplashConfig(props)?.backgroundColor ?? null;
 }
 
 export function getSplashDarkBackgroundColor(
-  config: ExpoConfig,
   props: AndroidSplashConfig | null
 ): string | null {
-  return getAndroidDarkSplashConfig(config, props)?.backgroundColor ?? null;
+  return getAndroidDarkSplashConfig(props)?.backgroundColor ?? null;
 }
 
 export function setSplashStylesForTheme(styles: AndroidConfig.Resources.ResourceXML) {

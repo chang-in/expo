@@ -21,30 +21,25 @@ describe(setSplashImageDrawablesAsync, () => {
     vol.reset();
   });
 
-  it(`sets all images`, async () => {
+  it(`should set all images`, async () => {
     await setSplashImageDrawablesAsync(
       {
-        android: {
-          splash: {
-            resizeMode: 'contain',
-            backgroundColor: '#ff0000',
-            mdpi: './assets/splash.png',
-            hdpi: './assets/splash.png',
-            xhdpi: './assets/splash.png',
-            xxhdpi: './assets/splash.png',
-            xxxhdpi: './assets/splash.png',
-            dark: {
-              backgroundColor: '#ff00ff',
-              mdpi: './assets/splash-dark.png',
-              hdpi: './assets/splash-dark.png',
-              xhdpi: './assets/splash-dark.png',
-              xxhdpi: './assets/splash-dark.png',
-              xxxhdpi: './assets/splash-dark.png',
-            },
-          },
+        resizeMode: 'contain',
+        backgroundColor: '#ff0000',
+        mdpi: './assets/splash.png',
+        hdpi: './assets/splash.png',
+        xhdpi: './assets/splash.png',
+        xxhdpi: './assets/splash.png',
+        xxxhdpi: './assets/splash.png',
+        dark: {
+          backgroundColor: '#ff00ff',
+          mdpi: './assets/splash-dark.png',
+          hdpi: './assets/splash-dark.png',
+          xhdpi: './assets/splash-dark.png',
+          xxhdpi: './assets/splash-dark.png',
+          xxxhdpi: './assets/splash-dark.png',
         },
       },
-      null,
       '/',
       100
     );
@@ -63,27 +58,22 @@ describe(setSplashImageDrawablesAsync, () => {
       '/android/app/src/main/res/drawable-night-xxxhdpi/splashscreen_logo.png',
     ];
     const results = vol.toJSON();
-    // expect(results).toBe({});
     for (const image of images) {
       expect(results[image]).toBe('...');
     }
   });
-  it(`sets minimal images`, async () => {
+
+  it(`should set minimal images`, async () => {
     await setSplashImageDrawablesAsync(
       {
-        android: {
-          splash: {
-            resizeMode: 'contain',
-            backgroundColor: '#ff0000',
-            image: './assets/splash.png',
-            dark: {
-              backgroundColor: '#ff00ff',
-              image: './assets/splash-dark.png',
-            },
-          },
+        resizeMode: 'contain',
+        backgroundColor: '#ff0000',
+        image: './assets/splash.png',
+        dark: {
+          backgroundColor: '#ff00ff',
+          image: './assets/splash-dark.png',
         },
       },
-      null,
       '/',
       100
     );
@@ -102,22 +92,17 @@ describe(setSplashImageDrawablesAsync, () => {
       '/android/app/src/main/res/drawable-night-xxxhdpi/splashscreen_logo.png',
     ];
     const results = vol.toJSON();
-    // expect(results).toBe({});
     for (const image of images) {
       expect(results[image]).toBe('...');
     }
   });
-  it(`sets no images`, async () => {
+
+  it(`should set no images when none provided`, async () => {
     await setSplashImageDrawablesAsync(
       {
-        android: {
-          splash: {
-            resizeMode: 'contain',
-            backgroundColor: '#ff0000',
-          },
-        },
+        resizeMode: 'contain',
+        backgroundColor: '#ff0000',
       },
-      null,
       './',
       100
     );

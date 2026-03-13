@@ -16,7 +16,7 @@ export const withIosSplashScreen: ConfigPlugin<IOSSplashConfig | undefined | nul
   props
 ) => {
   // If the user didn't specify a splash object, infer the splash object from the Expo config.
-  const splashConfig = getIosSplashConfig(config, props ?? null);
+  const splashConfig = getIosSplashConfig(props ?? null);
 
   debug(`config:`, props);
 

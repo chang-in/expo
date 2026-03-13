@@ -11,7 +11,7 @@ export const withAndroidSplashScreen: ConfigPlugin<
   AndroidSplashConfig | undefined | null | void
 > = (config, props) => {
   const isLegacyConfig = props === undefined;
-  const splashConfig = getAndroidSplashConfig(config, props ?? null);
+  const splashConfig = getAndroidSplashConfig(props ?? null);
 
   return withPlugins(config, [
     [withAndroidSplashMainActivity, { isLegacyConfig }],

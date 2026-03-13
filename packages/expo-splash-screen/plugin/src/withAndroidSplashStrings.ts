@@ -6,7 +6,7 @@ const RESIZE_MODE_KEY = 'expo_splash_screen_resize_mode';
 
 export const withAndroidSplashStrings: ConfigPlugin<AndroidSplashConfig> = (config, props) => {
   return withStringsXml(config, (config) => {
-    const splashConfig = getAndroidSplashConfig(config, props);
+    const splashConfig = getAndroidSplashConfig(props);
     if (splashConfig) {
       const { resizeMode } = splashConfig;
       config.modResults = setSplashStrings(config.modResults, resizeMode);

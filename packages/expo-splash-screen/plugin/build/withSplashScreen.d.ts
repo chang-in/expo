@@ -1,5 +1,5 @@
-import { AndroidSplashConfig } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/getAndroidSplashConfig';
-import { IOSSplashConfig } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/getIosSplashConfig';
+import { AndroidSplashConfig } from './getAndroidSplashConfig';
+import { IOSSplashConfig } from './getIosSplashConfig';
 import { ConfigPlugin } from 'expo/config-plugins';
 type PluginConfig = {
     backgroundColor: string;
