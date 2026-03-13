@@ -4,8 +4,9 @@ import {
   withAndroidColors,
   withAndroidColorsNight,
   withAndroidStyles,
-} from '@expo/config-plugins';
-import { Colors } from '@expo/config-plugins/build/android';
+} from 'expo/config-plugins';
+
+const { Colors } = AndroidConfig;
 
 import {
   AndroidSplashConfig,

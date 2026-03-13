@@ -1,4 +1,4 @@
-import { AndroidConfig, ConfigPlugin, withDangerousMod, XML } from '@expo/config-plugins';
+import { AndroidConfig, ConfigPlugin, withDangerousMod, XML } from 'expo/config-plugins';
 
 import { SplashScreenConfig } from './getAndroidSplashConfig';
 

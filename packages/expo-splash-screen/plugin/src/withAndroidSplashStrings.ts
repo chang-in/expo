@@ -1,4 +1,4 @@
-import { AndroidConfig, ConfigPlugin, withStringsXml } from '@expo/config-plugins';
+import { AndroidConfig, ConfigPlugin, withStringsXml } from 'expo/config-plugins';
 
 import { AndroidSplashConfig, getAndroidSplashConfig } from './getAndroidSplashConfig';
 

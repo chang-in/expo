@@ -6,8 +6,8 @@ exports.getSplashBackgroundColor = getSplashBackgroundColor;
 exports.getSplashDarkBackgroundColor = getSplashDarkBackgroundColor;
 exports.setSplashStylesForTheme = setSplashStylesForTheme;
 exports.setSplashColorsForTheme = setSplashColorsForTheme;
-const config_plugins_1 = require("@expo/config-plugins");
-const android_1 = require("@expo/config-plugins/build/android");
+const config_plugins_1 = require("expo/config-plugins");
+const { Colors } = config_plugins_1.AndroidConfig;
 const getAndroidSplashConfig_1 = require("./getAndroidSplashConfig");
 const styleResourceGroup = {
     name: 'Theme.App.SplashScreen',
@@ -115,5 +115,5 @@ function setSplashStylesForTheme(styles) {
     });
 }
 function setSplashColorsForTheme(colors, backgroundColor) {
-    return android_1.Colors.assignColorValue(colors, { value: backgroundColor, name: SPLASH_COLOR_NAME });
+    return Colors.assignColorValue(colors, { value: backgroundColor, name: SPLASH_COLOR_NAME });
 }

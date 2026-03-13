@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidSplashImages = void 0;
 exports.setSplashImageDrawablesAsync = setSplashImageDrawablesAsync;
 exports.setSplashImageDrawablesForThemeAsync = setSplashImageDrawablesForThemeAsync;
-const config_plugins_1 = require("@expo/config-plugins");
+const config_plugins_1 = require("expo/config-plugins");
 const image_utils_1 = require("@expo/image-utils");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));

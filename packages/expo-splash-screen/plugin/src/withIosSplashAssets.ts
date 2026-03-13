@@ -1,4 +1,4 @@
-import { ConfigPlugin, IOSConfig, withDangerousMod } from '@expo/config-plugins';
+import { ConfigPlugin, IOSConfig, withDangerousMod } from 'expo/config-plugins';
 import { generateImageAsync } from '@expo/image-utils';
 import Debug from 'debug';
 import fs from 'fs';

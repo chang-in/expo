@@ -1,4 +1,4 @@
-import { ConfigPlugin, withDangerousMod } from '@expo/config-plugins';
+import { ConfigPlugin, withDangerousMod } from 'expo/config-plugins';
 import {
   generateImageAsync,
   compositeImagesAsync,

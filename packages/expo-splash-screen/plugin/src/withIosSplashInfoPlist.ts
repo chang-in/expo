@@ -1,6 +1,6 @@
-import { ConfigPlugin, InfoPlist, WarningAggregator, withInfoPlist } from '@expo/config-plugins';
-import { ExpoConfig } from '@expo/config-types';
 import Debug from 'debug';
+import type { ExpoConfig } from 'expo/config';
+import { ConfigPlugin, InfoPlist, WarningAggregator, withInfoPlist } from 'expo/config-plugins';
 
 import { IOSSplashConfig } from './getIosSplashConfig';
 

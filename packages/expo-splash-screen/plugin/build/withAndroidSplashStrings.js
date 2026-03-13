@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidSplashStrings = void 0;
 exports.setSplashStrings = setSplashStrings;
-const config_plugins_1 = require("@expo/config-plugins");
+const config_plugins_1 = require("expo/config-plugins");
 const getAndroidSplashConfig_1 = require("./getAndroidSplashConfig");
 const RESIZE_MODE_KEY = 'expo_splash_screen_resize_mode';
 const withAndroidSplashStrings = (config, props) => {

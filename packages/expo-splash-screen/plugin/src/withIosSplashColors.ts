@@ -1,4 +1,4 @@
-import { ConfigPlugin, IOSConfig, withDangerousMod } from '@expo/config-plugins';
+import { ConfigPlugin, IOSConfig, withDangerousMod } from 'expo/config-plugins';
 import Debug from 'debug';
 import fs from 'fs';
 import path, { join } from 'path';

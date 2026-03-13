@@ -1,6 +1,6 @@
-import { compileModsAsync } from '@expo/config-plugins';
-import { ExpoConfig } from '@expo/config-types';
 import plist from '@expo/plist';
+import type { ExpoConfig } from 'expo/config';
+import { compileModsAsync } from 'expo/config-plugins';
 import * as fs from 'fs';
 import { vol } from 'memfs';
 import * as path from 'path';

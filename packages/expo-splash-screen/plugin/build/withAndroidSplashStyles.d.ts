@@ -1,4 +1,4 @@
-import { AndroidConfig, ConfigPlugin } from '@expo/config-plugins';
+import { AndroidConfig, ConfigPlugin } from 'expo/config-plugins';
 import { AndroidSplashConfig } from './getAndroidSplashConfig';
 export declare const withAndroidSplashStyles: ConfigPlugin<{
     splashConfig: AndroidSplashConfig | null;

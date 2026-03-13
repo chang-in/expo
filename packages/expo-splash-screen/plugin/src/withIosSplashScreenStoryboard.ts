@@ -1,4 +1,4 @@
-import { BaseMods, ConfigPlugin, Mod, withMod } from '@expo/config-plugins';
+import { BaseMods, ConfigPlugin, Mod, withMod } from 'expo/config-plugins';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Parser } from 'xml2js';

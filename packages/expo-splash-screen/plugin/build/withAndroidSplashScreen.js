@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidSplashScreen = void 0;
-const config_plugins_1 = require("@expo/config-plugins");
+const config_plugins_1 = require("expo/config-plugins");
 const getAndroidSplashConfig_1 = require("./getAndroidSplashConfig");
 const withAndroidSplashDrawables_1 = require("./withAndroidSplashDrawables");
 const withAndroidSplashImages_1 = require("./withAndroidSplashImages");

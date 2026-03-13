@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withIosSplashInfoPlist = void 0;
 exports.setSplashInfoPlist = setSplashInfoPlist;
-const config_plugins_1 = require("@expo/config-plugins");
 const debug_1 = __importDefault(require("debug"));
+const config_plugins_1 = require("expo/config-plugins");
 const debug = (0, debug_1.default)('expo:prebuild-config:expo-splash-screen:ios:infoPlist');
 const withIosSplashInfoPlist = (config, splash) => {
     return (0, config_plugins_1.withInfoPlist)(config, (config) => {

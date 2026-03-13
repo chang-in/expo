@@ -1,4 +1,4 @@
-import { ConfigPlugin, withPlugins } from '@expo/config-plugins';
+import { ConfigPlugin, withPlugins } from 'expo/config-plugins';
 import Debug from 'debug';
 
 import { getIosSplashConfig, IOSSplashConfig } from './getIosSplashConfig';

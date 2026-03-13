@@ -1,9 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidSplashMainActivity = void 0;
-const config_plugins_1 = require("@expo/config-plugins");
-const codeMod_1 = require("@expo/config-plugins/build/android/codeMod");
-const generateCode_1 = require("@expo/config-plugins/build/utils/generateCode");
+const config_plugins_1 = require("expo/config-plugins");
 const withAndroidSplashMainActivity = (config, { isLegacyConfig }) => {
     if (isLegacyConfig) {
         return config;
@@ -11,8 +9,8 @@ const withAndroidSplashMainActivity = (config, { isLegacyConfig }) => {
     return (0, config_plugins_1.withMainActivity)(config, (config) => {
         const { modResults } = config;
         const { language } = modResults;
-        const withImports = (0, codeMod_1.addImports)(modResults.contents.replace(/(\/\/ )?setTheme\(R\.style\.AppTheme\)/, '// setTheme(R.style.AppTheme)'), ['expo.modules.splashscreen.SplashScreenManager'], language === 'java');
-        const init = (0, generateCode_1.mergeContents)({
+        const withImports = config_plugins_1.AndroidConfig.CodeMod.addImports(modResults.contents.replace(/(\/\/ )?setTheme\(R\.style\.AppTheme\)/, '// setTheme(R.style.AppTheme)'), ['expo.modules.splashscreen.SplashScreenManager'], language === 'java');
+        const init = config_plugins_1.CodeGenerator.mergeContents({
             src: withImports,
             comment: '    //',
             tag: 'expo-splashscreen',

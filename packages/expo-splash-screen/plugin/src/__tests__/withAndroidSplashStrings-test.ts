@@ -1,4 +1,4 @@
-import { XML } from '@expo/config-plugins';
+import { XML } from 'expo/config-plugins';
 
 import { setSplashStrings } from '../withAndroidSplashStrings';
 

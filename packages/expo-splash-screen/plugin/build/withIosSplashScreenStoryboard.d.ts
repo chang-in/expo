@@ -1,4 +1,4 @@
-import { ConfigPlugin, Mod } from '@expo/config-plugins';
+import { ConfigPlugin, Mod } from 'expo/config-plugins';
 import { IBSplashScreenDocument } from './InterfaceBuilder';
 export declare const STORYBOARD_FILE_PATH = "./SplashScreen.storyboard";
 /**

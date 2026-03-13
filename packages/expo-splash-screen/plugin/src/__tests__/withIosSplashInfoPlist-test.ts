@@ -1,5 +1,5 @@
-import { WarningAggregator } from '@expo/config-plugins';
-import { ExpoConfig } from '@expo/config-types';
+import type { ExpoConfig } from 'expo/config';
+import { WarningAggregator } from 'expo/config-plugins';
 
 import { setSplashInfoPlist } from '../withIosSplashInfoPlist';
 

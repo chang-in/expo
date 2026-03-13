@@ -35,7 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withIosSplashScreenStoryboardBaseMod = exports.withIosSplashScreenStoryboard = exports.STORYBOARD_FILE_PATH = void 0;
 exports.getTemplateAsync = getTemplateAsync;
-const config_plugins_1 = require("@expo/config-plugins");
+const config_plugins_1 = require("expo/config-plugins");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const xml2js_1 = require("xml2js");

@@ -1,4 +1,4 @@
-import { ConfigPlugin } from '@expo/config-plugins';
+import { ConfigPlugin } from 'expo/config-plugins';
 import { IOSSplashConfig } from './getIosSplashConfig';
 export type ContentsJsonColor = {
     appearances?: {

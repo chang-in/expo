@@ -1,6 +1,4 @@
-import { ConfigPlugin, withMainActivity } from '@expo/config-plugins';
-import { addImports } from '@expo/config-plugins/build/android/codeMod';
-import { mergeContents } from '@expo/config-plugins/build/utils/generateCode';
+import { AndroidConfig, CodeGenerator, ConfigPlugin, withMainActivity } from 'expo/config-plugins';
 
 export const withAndroidSplashMainActivity: ConfigPlugin<{ isLegacyConfig: boolean }> = (
   config,
@@ -13,7 +11,7 @@ export const withAndroidSplashMainActivity: ConfigPlugin<{ isLegacyConfig: boole
     const { modResults } = config;
     const { language } = modResults;
 
-    const withImports = addImports(
+    const withImports = AndroidConfig.CodeMod.addImports(
       modResults.contents.replace(
         /(\/\/ )?setTheme\(R\.style\.AppTheme\)/,
         '// setTheme(R.style.AppTheme)'
@@ -22,7 +20,7 @@ export const withAndroidSplashMainActivity: ConfigPlugin<{ isLegacyConfig: boole
       language === 'java'
     );
 
-    const init = mergeContents({
+    const init = CodeGenerator.mergeContents({
       src: withImports,
       comment: '    //',
       tag: 'expo-splashscreen',

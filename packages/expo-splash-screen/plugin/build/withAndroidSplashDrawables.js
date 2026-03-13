@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidSplashDrawables = void 0;
 exports.setSplashDrawableAsync = setSplashDrawableAsync;
-const config_plugins_1 = require("@expo/config-plugins");
+const config_plugins_1 = require("expo/config-plugins");
 const withAndroidSplashDrawables = (config, splash) => {
     return (0, config_plugins_1.withDangerousMod)(config, [
         'android',
