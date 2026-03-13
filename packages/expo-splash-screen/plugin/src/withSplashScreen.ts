@@ -1,8 +1,9 @@
+import { ConfigPlugin, createRunOncePlugin } from 'expo/config-plugins';
+
 import { AndroidSplashConfig } from './getAndroidSplashConfig';
 import { IOSSplashConfig } from './getIosSplashConfig';
 import { withAndroidSplashScreen } from './withAndroidSplashScreen';
 import { withIosSplashScreen } from './withIosSplashScreen';
-import { ConfigPlugin, createRunOncePlugin } from 'expo/config-plugins';
 
 const pkg = require('expo-splash-screen/package.json');
 

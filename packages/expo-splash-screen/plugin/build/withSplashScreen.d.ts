@@ -1,6 +1,6 @@
+import { ConfigPlugin } from 'expo/config-plugins';
 import { AndroidSplashConfig } from './getAndroidSplashConfig';
 import { IOSSplashConfig } from './getIosSplashConfig';
-import { ConfigPlugin } from 'expo/config-plugins';
 type PluginConfig = {
     backgroundColor: string;
     imageWidth?: number;

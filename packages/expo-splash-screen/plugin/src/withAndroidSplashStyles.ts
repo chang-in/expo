@@ -117,15 +117,11 @@ export function removeOldSplashStyleGroup(styles: AndroidConfig.Resources.Resour
   return styles;
 }
 
-export function getSplashBackgroundColor(
-  props: AndroidSplashConfig | null
-): string | null {
+export function getSplashBackgroundColor(props: AndroidSplashConfig | null): string | null {
   return getAndroidSplashConfig(props)?.backgroundColor ?? null;
 }
 
-export function getSplashDarkBackgroundColor(
-  props: AndroidSplashConfig | null
-): string | null {
+export function getSplashDarkBackgroundColor(props: AndroidSplashConfig | null): string | null {
   return getAndroidDarkSplashConfig(props)?.backgroundColor ?? null;
 }
 

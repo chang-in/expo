@@ -17,9 +17,7 @@ export interface IOSSplashConfig {
   };
 }
 
-export function getIosSplashConfig(
-  props: IOSSplashConfig | null
-): IOSSplashConfig | null {
+export function getIosSplashConfig(props: IOSSplashConfig | null): IOSSplashConfig | null {
   if (props) {
     return {
       image: props.image,

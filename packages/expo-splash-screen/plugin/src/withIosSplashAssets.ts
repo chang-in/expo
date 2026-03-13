@@ -4,13 +4,13 @@ import Debug from 'debug';
 import fs from 'fs';
 import path from 'path';
 
-import { IOSSplashConfig } from './getIosSplashConfig';
 import {
   ContentsJsonImage,
   ContentsJsonAppearance,
   createContentsJsonItem,
   writeContentsJsonAsync,
 } from './AssetContents';
+import { IOSSplashConfig } from './getIosSplashConfig';
 
 const debug = Debug('expo:prebuild-config:expo-splash-screen:ios:assets');
 

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const config_plugins_1 = require("expo/config-plugins");
 const withAndroidSplashScreen_1 = require("./withAndroidSplashScreen");
 const withIosSplashScreen_1 = require("./withIosSplashScreen");
-const config_plugins_1 = require("expo/config-plugins");
 const pkg = require('expo-splash-screen/package.json');
 const withSplashScreen = (config, props) => {
     let android = null;
