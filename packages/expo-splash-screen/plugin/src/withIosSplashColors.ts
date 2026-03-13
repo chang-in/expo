@@ -5,7 +5,19 @@ import path, { join } from 'path';
 
 import { parseColor } from './InterfaceBuilder';
 import { IOSSplashConfig } from './getIosSplashConfig';
-import { ContentsJsonColor } from '../../icons/AssetContents';
+export type ContentsJsonColor = {
+  appearances?: { appearance: 'luminosity'; value: 'light' | 'dark' | 'tinted' }[];
+  idiom: 'iphone' | 'ipad' | 'watchos' | 'ios' | 'ios-marketing' | 'universal';
+  color: {
+    'color-space': 'srgb';
+    components: {
+      alpha: string;
+      blue: string;
+      green: string;
+      red: string;
+    };
+  };
+};
 
 const debug = Debug('expo:prebuild-config:expo-splash-screen:ios:splash-colorset');
 

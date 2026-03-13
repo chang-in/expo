@@ -10,7 +10,7 @@ import {
   ContentsJsonAppearance,
   createContentsJsonItem,
   writeContentsJsonAsync,
-} from '../../icons/AssetContents';
+} from './AssetContents';
 
 const debug = Debug('expo:prebuild-config:expo-splash-screen:ios:assets');
 

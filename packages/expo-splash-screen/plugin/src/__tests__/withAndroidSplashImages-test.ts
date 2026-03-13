@@ -1,6 +1,6 @@
 import { vol } from 'memfs';
 
-import fixtures from '../../../__tests__/fixtures/react-native-project';
+import fixtures from './fixtures/react-native-project';
 import { setSplashImageDrawablesAsync } from '../withAndroidSplashImages';
 
 jest.mock('fs');

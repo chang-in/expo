@@ -21,7 +21,6 @@ import withContacts from './unversioned/expo-contacts';
 import withDocumentPicker from './unversioned/expo-document-picker';
 import withInlineModules from './unversioned/expo-inline-modules/withInlineModules';
 import withNotifications from './unversioned/expo-notifications/expo-notifications';
-import withSplashScreen from './unversioned/expo-splash-screen/expo-splash-screen';
 import withSystemUI from './unversioned/expo-system-ui/expo-system-ui';
 import withUpdates from './unversioned/expo-updates';
 import withMaps from './unversioned/react-native-maps';
@@ -132,7 +131,6 @@ const versionedExpoSDKPackages: string[] = [
   'expo-updates',
   'expo-navigation-bar',
   'expo-document-picker',
-  'expo-splash-screen',
   'expo-system-ui',
   'expo-inline-modules',
 ];
@@ -145,10 +143,7 @@ export const withVersionedExpoSDKPlugins: ConfigPlugin = (config) => {
     withNotifications,
     withUpdates,
     withDocumentPicker,
-    // System UI must come before splash screen as they overlap
-    // and splash screen will warn about conflicting rules.
     withSystemUI,
-    withSplashScreen,
     withInlineModules,
   ]);
 };

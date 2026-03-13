@@ -1,7 +1,7 @@
-import { AndroidSplashConfig } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/getAndroidSplashConfig';
-import { IOSSplashConfig } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/getIosSplashConfig';
-import { withAndroidSplashScreen } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/withAndroidSplashScreen';
-import { withIosSplashScreen } from '@expo/prebuild-config/build/plugins/unversioned/expo-splash-screen/withIosSplashScreen';
+import { AndroidSplashConfig } from './getAndroidSplashConfig';
+import { IOSSplashConfig } from './getIosSplashConfig';
+import { withAndroidSplashScreen } from './withAndroidSplashScreen';
+import { withIosSplashScreen } from './withIosSplashScreen';
 import { ConfigPlugin, createRunOncePlugin } from 'expo/config-plugins';
 
 const pkg = require('expo-splash-screen/package.json');
