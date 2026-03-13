@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withIosSplashScreen = void 0;
-const config_plugins_1 = require("expo/config-plugins");
 const debug_1 = __importDefault(require("debug"));
+const config_plugins_1 = require("expo/config-plugins");
 const getIosSplashConfig_1 = require("./getIosSplashConfig");
 const withIosSplashAssets_1 = require("./withIosSplashAssets");
 const withIosSplashColors_1 = require("./withIosSplashColors");

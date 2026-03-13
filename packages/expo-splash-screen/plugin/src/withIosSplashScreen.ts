@@ -1,5 +1,5 @@
-import { ConfigPlugin, withPlugins } from 'expo/config-plugins';
 import Debug from 'debug';
+import { ConfigPlugin, withPlugins } from 'expo/config-plugins';
 
 import { getIosSplashConfig, IOSSplashConfig } from './getIosSplashConfig';
 import { withIosSplashAssets } from './withIosSplashAssets';

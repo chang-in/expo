@@ -1,9 +1,9 @@
-import { ConfigPlugin, withDangerousMod } from 'expo/config-plugins';
 import {
   generateImageAsync,
   compositeImagesAsync,
   generateImageBackgroundAsync,
 } from '@expo/image-utils';
+import { ConfigPlugin, withDangerousMod } from 'expo/config-plugins';
 import fs from 'fs';
 import path from 'path';
 

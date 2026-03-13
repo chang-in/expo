@@ -6,13 +6,13 @@ import {
   withAndroidStyles,
 } from 'expo/config-plugins';
 
-const { Colors } = AndroidConfig;
-
 import {
   AndroidSplashConfig,
   getAndroidDarkSplashConfig,
   getAndroidSplashConfig,
 } from './getAndroidSplashConfig';
+
+const { Colors } = AndroidConfig;
 
 const styleResourceGroup = {
   name: 'Theme.App.SplashScreen',
