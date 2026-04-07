@@ -77,9 +77,9 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
     // Some simple value kinds do not require the runtime.
     switch kind {
     case .undefined:
-      return .undefined()
+      return .undefined
     case .null:
-      return .null()
+      return .null
     case .bool:
       return .init(nil, facebook.jsi.Value(getBool()))
     case .number:
@@ -156,6 +156,16 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
       FatalError.runtimeLost()
     }
     return pointee.isObject() && expo.isTypedArray(jsiRuntime, pointee.getObject(jsiRuntime))
+  }
+
+  /**
+   Checks whether the value is an `ArrayBuffer`.
+   */
+  public func isArrayBuffer() -> Bool {
+    guard let jsiRuntime = runtime?.pointee else {
+      FatalError.runtimeLost()
+    }
+    return pointee.isObject() && pointee.getObject(jsiRuntime).isArrayBuffer(jsiRuntime)
   }
 
   /**
@@ -305,6 +315,17 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
   }
 
   /**
+   Returns the value as an array buffer, or asserts if it is not an array buffer.
+   */
+  public func getArrayBuffer() -> JavaScriptArrayBuffer {
+    guard let runtime else {
+      FatalError.runtimeLost()
+    }
+    assert(isArrayBuffer(), "Value is not an array buffer")
+    return JavaScriptArrayBuffer(runtime, pointee.getObject(runtime.pointee).getArrayBuffer(runtime.pointee))
+  }
+
+  /**
    Returns the value as a promise, or asserts if it is not a promise.
    */
   @JavaScriptActor
@@ -398,6 +419,19 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
     return getPromise()
   }
 
+  /**
+   Returns the value as a `JavaScriptArrayBuffer`.
+   Throws `TypeError` if the value is not an object or not an `ArrayBuffer`.
+   */
+  @JavaScriptActor
+  public func asArrayBuffer() throws(TypeError) -> JavaScriptArrayBuffer {
+    let object = try asObject()
+    guard object.isArrayBuffer() else {
+      throw TypeError(type: JavaScriptArrayBuffer.self)
+    }
+    return object.getArrayBuffer()
+  }
+
   // MARK: - Serializing
 
   /**
@@ -455,7 +489,7 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
    try obj.jsonStringify(replacer: replacer) // {"name":"Alice"}
 
    // Undefined returns nil
-   let undefined = JavaScriptValue.undefined()
+   let undefined = JavaScriptValue.undefined
    try undefined.jsonStringify() // nil
    ```
 
@@ -601,8 +635,8 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
    where a runtime is not available or needed. The resulting value can be passed to
    JavaScript functions or used in comparisons.
    */
-  public static func undefined() -> JavaScriptValue {
-    return JavaScriptValue(nil, facebook.jsi.Value.undefined())
+  public static var undefined: JavaScriptValue {
+    JavaScriptValue(nil, facebook.jsi.Value.undefined())
   }
 
   /**
@@ -610,8 +644,8 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
    where a runtime is not available or needed. The resulting value represents
    JavaScript's `null`, which is distinct from `undefined`.
    */
-  public static func null() -> JavaScriptValue {
-    return JavaScriptValue(nil, facebook.jsi.Value.null())
+  public static var null: JavaScriptValue {
+    JavaScriptValue(nil, facebook.jsi.Value.null())
   }
 
   /**
@@ -648,7 +682,7 @@ public final class JavaScriptValue: JavaScriptType, Equatable, Escapable, Error 
     if let value = value as? JavaScriptRepresentable {
       return value.toJavaScriptValue(in: runtime)
     }
-    return .undefined()
+    return .undefined
   }
 }
 
