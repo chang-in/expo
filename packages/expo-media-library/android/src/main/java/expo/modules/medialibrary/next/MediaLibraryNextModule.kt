@@ -156,6 +156,10 @@ class MediaLibraryNextModule : Module() {
       AsyncFunction("delete") Coroutine { self: Album ->
         self.delete()
       }
+
+      StaticAsyncFunction("getAll") Coroutine { ->
+        albumQuery.getAllAlbums()
+      }
     }
 
     Class(Query::class) {
