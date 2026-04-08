@@ -149,8 +149,8 @@ public final class MediaLibraryNextModule: Module {
         try await album.getAssets()
       }
 
-      AsyncFunction("add") { (album: Album, asset: Asset) async throws in
-        try await album.add(asset)
+      AsyncFunction("add") { (album: Album, assets: [Asset]) async throws in
+        try await album.add(assets)
       }
 
       AsyncFunction("delete") { (album: Album) async throws in

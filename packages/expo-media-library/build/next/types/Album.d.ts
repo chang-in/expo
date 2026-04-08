@@ -54,17 +54,22 @@ export declare class Album {
      */
     delete(): Promise<void>;
     /**
-     * Adds an asset to the album.
-     * @param asset - The {@link Asset} to add.
-     * @returns A promise that resolves once the asset has been added.
+     * Adds one or more assets to the album.
+     * @param assets - The {@link Asset} or list of {@link Asset} objects to add.
+     * @returns A promise that resolves once the assets have been added.
      *
      * @example
      * ```ts
      * const asset = await Asset.create("file:///path/to/photo.png");
      * await album.add(asset);
      * ```
+     *
+     * @example
+     * ```ts
+     * await album.add([asset1, asset2]);
+     * ```
      */
-    add(asset: Asset): Promise<void>;
+    add(assets: Asset | Asset[]): Promise<void>;
     /**
      * A static function. Creates a new album with a given name and assets.
      * On Android, if assets are provided and `moveAssets` is true, the assets will be moved into the new album. If false or not supported, the assets will be copied.
