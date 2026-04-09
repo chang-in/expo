@@ -265,10 +265,14 @@ const AssetScreen = () => {
         <>
           {isVideo ? (
             <VideoView player={player} style={styles.video} />
+          ) : pairedVideoUri ? (
+            <View style={styles.livePhotoContainer}>
+              <Image source={{ uri: asset?.id }} style={styles.livePhotoImage} />
+              <VideoView player={pairedVideoPlayer} style={styles.livePhotoVideo} />
+            </View>
           ) : (
             <Image source={{ uri: asset?.id }} style={styles.image} />
           )}
-          {pairedVideoUri && <VideoView player={pairedVideoPlayer} style={styles.video} />}
           <View style={styles.buttonContainer}>
             <Pressable style={styles.deleteButton} onPress={handleDeleteAsset}>
               <Text style={styles.deleteButtonText}>Delete Asset</Text>
@@ -342,6 +346,22 @@ const styles = StyleSheet.create({
   video: {
     width: 300,
     height: 200,
+  },
+  livePhotoContainer: {
+    flexDirection: 'row',
+    gap: 12,
+    alignItems: 'center',
+  },
+  livePhotoImage: {
+    width: 160,
+    height: 160,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ddd',
+  },
+  livePhotoVideo: {
+    width: 160,
+    height: 160,
   },
   bold: {
     fontWeight: '600',
