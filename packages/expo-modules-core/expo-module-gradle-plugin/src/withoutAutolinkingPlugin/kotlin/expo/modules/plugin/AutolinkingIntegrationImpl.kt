@@ -3,6 +3,7 @@ package expo.modules.plugin
 import org.gradle.api.Project
 import java.io.File
 
+// Test
 class AutolinkingIntegrationImpl : AutolinkingIntegration {
   override fun getExpoDependency(project: Project, name: String): Any {
     return project.rootProject.findProject(":$name")
