@@ -1,23 +1,24 @@
 import ExpoModulesCore
 
 public final class MediaLibraryNextModule: Module {
+  private static let libraryDidChangeEvent = "mediaLibraryDidChange"
   private lazy var observerManager = PhotoLibraryObserverManager(onChange: { [weak self] body in
     guard let self = self else {
       return
     }
-    self.sendEvent("mediaLibraryDidChange", body)
+    self.sendEvent(MediaLibraryNextModule.libraryDidChangeEvent, body)
   })
 
   public func definition() -> ModuleDefinition {
     Name("ExpoMediaLibraryNext")
 
-    Events("mediaLibraryDidChange")
+    Events(MediaLibraryNextModule.libraryDidChangeEvent)
 
-    OnStartObserving {
+    OnStartObserving(MediaLibraryNextModule.libraryDidChangeEvent) {
       observerManager.startObserving()
     }
 
-    OnStopObserving {
+    OnStopObserving(MediaLibraryNextModule.libraryDidChangeEvent) {
       observerManager.stopObserving()
     }
 
