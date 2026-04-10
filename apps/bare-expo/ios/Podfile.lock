@@ -694,6 +694,7 @@ PODS:
     - ExpoModulesCore
   - ExpoUI (55.0.1):
     - ExpoModulesCore
+    - ExpoModulesWorklets
     - React-RCTFabric
   - ExpoVideo (55.0.9):
     - ExpoModulesCore
@@ -3921,7 +3922,7 @@ SPEC CHECKSUMS:
   ExpoAgeRange: 87dd980cb26e47b1108e24c39bcfb88a9ab1030e
   ExpoAppIntegrity: 7e3ae77f96e3a3f742fe318d7aac24b66a7bead0
   ExpoAppleAuthentication: c8096cd35e4e4f88aec34fcbfcd9deae7cea04d3
-  ExpoAppMetrics: 4d9929148c8c38dd58e8c4aa08d1c12c5e7b8542
+  ExpoAppMetrics: 23cb572291ff358da73e9120b28b2ee721f84763
   ExpoAsset: 595cc0587b67afaaedddca79d4c1cf506400cb27
   ExpoAudio: 40c883c60ed3bb17ecb3744a00732fb47029535b
   ExpoBackgroundFetch: ee315c8d1a54a3f358fc0cedb68e808e95935c57
@@ -3968,7 +3969,7 @@ SPEC CHECKSUMS:
   ExpoModulesWorklets: fe2384a395429f5148f20204d229fb50926f9392
   ExpoNetwork: 15d026c5c28251e0810849c8c01ebc9bc73ad007
   ExpoNotifications: 58a5bf9c5a0a2ee7d1800f9ed26ff17ff3748fde
-  ExpoObserve: be28c7c387eb5490b3bd7717c411c38dd2f343dd
+  ExpoObserve: 5b062a1f0a70be519b2b5306b0f80930ce36c3a6
   ExpoPrint: 884afdcfe9adea0d36f121353652d0cfa7963deb
   ExpoRouter: 617b413f30eb9fa39b210e4261814b13afd0418b
   ExpoScreenCapture: fe37f0547515f17434b002dcda5e1725fc61fe6f
@@ -3985,7 +3986,7 @@ SPEC CHECKSUMS:
   ExpoSystemUI: 45304f7673a470749a0fc099b09ba0a23d1a89c2
   ExpoTaskManager: f980f9df7beb21d409decf4bc610f5676318da18
   ExpoTrackingTransparency: a980b930c8e2affc688dd93940dc5b88f55c875b
-  ExpoUI: 470515a8095675c5f4efc12ab685d8758e1ee945
+  ExpoUI: e6e61b9aa1424349659c6cb1165adee716a89b69
   ExpoVideo: eca730ba53ec45c2a188aa9dbfe11f7f809d66a1
   ExpoVideoThumbnails: 2340f0b7f599c9ce6ba49a885f783de919cf4dd3
   ExpoWebBrowser: b65b3921741b51c5513e2a369f59c37076987d9b
@@ -3993,7 +3994,7 @@ SPEC CHECKSUMS:
   EXUpdates: a0f980531cbcf45906b2489febd4e11a5895f332
   EXUpdatesInterface: 5ab8c3e8018ef533a132b9327af5b2a1926dd299
   FBLazyVector: c00c20551d40126351a6783c47ce75f5b374851b
-  hermes-engine: 407f52f1dca2c25263c5f76e80cc38a39e0f6ec0
+  hermes-engine: 28d01fde82b0647ec4e5718e74a7796fde3940c9
   libavif: 5f8e715bea24debec477006f21ef9e95432e254d
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
@@ -4011,7 +4012,7 @@ SPEC CHECKSUMS:
   React: 1b1536b9099195944034e65b1830f463caaa8390
   React-callinvoker: 6dff6d17d1d6cc8fdf85468a649bafed473c65f5
   React-Core: 00faa4d038298089a1d5a5b21dde8660c4f0820d
-  React-Core-prebuilt: 705f99b0bd56f86a0236e6fcdc1050e9d688561a
+  React-Core-prebuilt: 80a391484989b6c8683c1c18866327ef21e51fe6
   React-CoreModules: a17807f849bfd86045b0b9a75ec8c19373b482f6
   React-cxxreact: c7b53ace5827be54048288bce5c55f337c41e95f
   React-debug: e1f00fcd2cef58a2897471a6d76a4ef5f5f90c74
@@ -4081,7 +4082,7 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: 5787b37b8e2e51dfeab697ec031cc7c4080dcea2
   ReactCodegen: c6d3cb3ac0f52891ba8d0fb1ddadaca8f4491df2
   ReactCommon: fe2a3af8975e63efa60f95fca8c34dc85deee360
-  ReactNativeDependencies: 0c3e1ac9f777b276b1b6bf0d630829e3c72d54ad
+  ReactNativeDependencies: 20fa81f097ca333e49ffbb4b60cfc7828c6fbf52
   RNCAsyncStorage: 2ad919e88b8bc2cd80e8697ce66d04d006743283
   RNCMaskedView: eb2b2e538afa907f05a5848a1a1ac26092e6fec9
   RNCPicker: d74667bdfc08ed389a2a277d95b8faf2349290a9
