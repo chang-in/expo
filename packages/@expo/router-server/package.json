@@ -65,7 +65,7 @@
     "@types/react-dom": "^19.1.7",
     "@types/node": "^22.14.0",
     "@expo/cli": "workspace:*",
-    "react-server-dom-webpack": "~19.0.1",
+    "react-server-dom-webpack": "~19.0.5",
     "tsd": "^0.28.1",
     "tsd-lite": "^0.8.0"
   },
