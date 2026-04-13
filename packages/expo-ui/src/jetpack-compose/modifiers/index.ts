@@ -432,3 +432,6 @@ export const Shapes = {
  * @param shape - A shape from `Shapes`, e.g. `Shapes.Circle` or `Shapes.Material.Heart`.
  */
 export const clip = (shape: BuiltinShape) => createModifier('clip', { shape });
+
+export * from './createModifier';
+export * from './utils';

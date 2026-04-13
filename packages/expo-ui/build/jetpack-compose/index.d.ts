@@ -41,4 +41,5 @@ export * from './Row';
 export * from './Column';
 export * from './FlowRow';
 export { ViewEvent } from '../types';
+export { type PrimitiveBaseProps } from './layout-types';
 //# sourceMappingURL=index.d.ts.map

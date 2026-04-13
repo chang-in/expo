@@ -291,6 +291,13 @@ object ModifierRegistry {
   }
 
   /**
+   * Unregisters a modifier with the given type name.
+   */
+  fun unregister(type: String) {
+    modifierFactories.remove(type)
+  }
+
+  /**
    * Checks if a modifier type is registered.
    */
   fun hasModifier(type: String): Boolean {
