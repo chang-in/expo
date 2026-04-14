@@ -6,6 +6,7 @@
 
 ### 🎉 New features
 
+- Resolve `expo-splash-screen` image assets in the manifest middleware so Expo Go can display configured splash screens. ([#44732](https://github.com/expo/expo/pull/44732) by [@zoontek](https://github.com/zoontek))
 - Allow `expo start`, `expo export`, and `expo config` to work without `react-native` installed for web-only projects. ([#44294](https://github.com/expo/expo/pull/44294) by [@EvanBacon](https://github.com/EvanBacon))
 - Pass optional name to metro require for async modules. ([#44224](https://github.com/expo/expo/pull/44224) by [@EvanBacon](https://github.com/EvanBacon))
 - Add `--output` option to `expo run:ios` to copy built app binary to a specified directory. ([#43529](https://github.com/expo/expo/pull/43529) by [@evanbacon](https://github.com/evanbacon))
