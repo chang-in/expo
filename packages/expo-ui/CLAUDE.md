@@ -12,6 +12,7 @@ Prefer controlled components: state lives in JS and is passed as props, not mana
 
 - The JavaScript API must mirror the native APIs closely.
 - Exported components must have the same name as the underlying native component (e.g. SwiftUI `TabView` -> export `TabView`, Jetpack Compose `HorizontalPager` -> export `HorizontalPager`).
+- do not turn native-layer modifiers into props in the JS layer - modifiers stay as modifiers
 - Use `export function ComponentName` (the dominant pattern in this codebase). Use `export const` only for non-component values like modifiers or constants. Avoid the `export { LocalName as ExportName }` rename pattern unless the local name must differ.
 - Props, constants, and enum values must use the same names as the native API. If SwiftUI calls it `scrollEnabled`, the JS prop is `scrollEnabled`. If Compose calls it `userScrollEnabled`, the JS prop is `userScrollEnabled`.
 
